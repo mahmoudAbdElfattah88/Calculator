@@ -1,0 +1,88 @@
+/////////////////////// INFO ///////////////////////////
+    // Mada FrameWork
+    // Version 1
+    // Contact me
+    // ++2 01013417075
+    // Email: mahmoudabdelfattah911@gmail.com
+//////////////////////////////////////////////////
+// IMPORTING FILE
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,300;1,700&display=swap')
+
+// VARAIABLES
+$font-Montserrat: 'Montserrat', sans-serif
+$main-space:1.5rem
+$time-transition: 0.3s
+
+// style 
+*
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+html
+    font-size: 10px
+body
+    font-family:$font-Montserrat 
+.wrapper
+    width: 100vw
+    height: 100vh
+    background: linear-gradient(to right,#005282,#007d50)
+    position: relative
+
+    .calc
+        position: absolute
+        left: 50%
+        top: 50%
+        transform: translate(-50%,-50%)
+        max-width: 30rem
+        background: rgba(255,255,255,0.2)
+        display: grid
+        grid-template-columns: repeat(4,1fr)
+        gap: 1rem
+        justify-content: center
+        box-shadow: 0 0 10px #021f14
+        border-radius: 2px
+        padding: $main-space 
+        .pre,.result
+            grid-column: span 4
+            padding-right: $main-space
+            text-align: right
+            color: white
+            min-height: 5rem
+            box-shadow: 0 0 2px #2c6586 inset
+            display: flex
+            flex-direction: column
+            justify-content: center
+            letter-spacing: 0.1rem
+        .pre
+            font: italic 300 3rem $font-Montserrat 
+            color: #010101
+        .result
+            font: italic 700 4rem $font-Montserrat
+        button
+            padding: $main-space 2rem
+            border: none
+            background: transparent
+            box-shadow: 0 0 5px #005282
+            transition: $time-transition
+            &:hover
+                box-shadow: 0 0 5px #0F2027
+                background: linear-gradient(to right,  #0F2027, #131e23, #4e636b)
+            
+                color: #fafafa
+        .clear
+            background: #b4111106
+            text-transform: uppercase
+            &:hover
+                background: #df3232
+                box-shadow: 0 0 5px #df3232
+        .oper
+            &:hover
+                background: #005282
+                box-shadow: 0 0 5px #005282
+        .plus
+            grid-row: span 2
+        .equal
+            grid-column: span 2
+            &:hover
+                background: #007d50
+                box-shadow: 0 0 5px #007d50

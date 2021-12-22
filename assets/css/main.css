@@ -1,0 +1,92 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,300;1,700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+.wrapper {
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(to right, #005282, #007d50);
+  position: relative;
+}
+.wrapper .calc {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 30rem;
+  background: rgba(255, 255, 255, 0.2);
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  justify-content: center;
+  box-shadow: 0 0 10px #021f14;
+  border-radius: 2px;
+  padding: 1.5rem;
+}
+.wrapper .calc .pre, .wrapper .calc .result {
+  grid-column: span 4;
+  padding-right: 1.5rem;
+  text-align: right;
+  color: white;
+  min-height: 5rem;
+  box-shadow: 0 0 2px #2c6586 inset;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  letter-spacing: 0.1rem;
+}
+.wrapper .calc .pre {
+  font: italic 300 3rem "Montserrat", sans-serif;
+  color: #010101;
+}
+.wrapper .calc .result {
+  font: italic 700 4rem "Montserrat", sans-serif;
+}
+
+.wrapper .calc button {
+  padding: 1.5rem 2rem;
+  border: none;
+  background: transparent;
+  box-shadow: 0 0 5px #005282;
+  transition: 0.3s;
+}
+.wrapper .calc button:hover {
+  box-shadow: 0 0 5px #0F2027;
+  background: linear-gradient(to right, #0F2027, #131e23, #4e636b);
+  color: #fafafa;
+}
+.wrapper .calc .clear {
+  background: #b4111106;
+  text-transform: uppercase;
+}
+.wrapper .calc .clear:hover {
+  background: #df3232;
+  box-shadow: 0 0 5px #df3232;
+}
+.wrapper .calc .oper:hover {
+  background: #005282;
+  box-shadow: 0 0 5px #005282;
+}
+.wrapper .calc .plus {
+  grid-row: span 2;
+}
+.wrapper .calc .equal {
+  grid-column: span 2;
+}
+.wrapper .calc .equal:hover {
+  background: #007d50;
+  box-shadow: 0 0 5px #007d50;
+}
+
+/*# sourceMappingURL=main.css.map */
